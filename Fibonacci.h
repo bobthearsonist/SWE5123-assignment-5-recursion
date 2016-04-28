@@ -1,12 +1,26 @@
 #include <vector>
+#include <ostream>
+#include <iostream>
 
 class Fibonacci
 {
 private:
-	int numberOfValuesToCalculate;
+	int count;
 	std::vector<int> sequence;
 public:
-	int Recursive(int i);
-	Fibonacci(int numberOfValuesToCalculate);
-	std::vector<int> Recursive();
+	Fibonacci() {};
+
+	int Recursive(int);
+	std::vector<int> Iterative(int);
+	std::vector<int> Sequence(int);
+	friend std::ostream& operator<<(std::ostream& stream, const Fibonacci& fibonacci);
 };
+
+inline std::ostream& operator<<(std::ostream& stream, const Fibonacci& fibonacci)
+{
+	for (std::vector<int>::const_iterator iterator = fibonacci.sequence.begin(); iterator < fibonacci.sequence.end(); ++iterator)
+	{
+		stream << *iterator << std::endl;
+	}
+	return stream;
+}
