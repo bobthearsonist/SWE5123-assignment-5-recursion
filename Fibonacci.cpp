@@ -1,6 +1,6 @@
 #include "Fibonacci.h"
 
-int Fibonacci::Recursive(int i)
+int Fibonacci::RecursiveHelper(int i)
 {
 	++count;
 	if (i == 0)
@@ -11,13 +11,14 @@ int Fibonacci::Recursive(int i)
 	{
 		return 1;
 	}
-	return Recursive(i-2) + Recursive(i - 1);
+	return RecursiveHelper(i-2) + RecursiveHelper(i - 1);
 }
 
-std::vector<int> Fibonacci::Iterative(int index)
+std::vector<int> Fibonacci::CalculcateIteratively(unsigned int numberOfValuesInSequence)
 {
-	for (int iterator = 0 ; iterator < index ; ++iterator)
+	for (int iterator = 0 ; iterator < numberOfValuesInSequence ; ++iterator)
 	{
+		++count;
 		if(iterator == 0)
 		{
 			sequence.push_back(0);
@@ -28,18 +29,17 @@ std::vector<int> Fibonacci::Iterative(int index)
 		}
 		else
 		{
-			++count;
 			sequence.push_back(sequence[iterator - 1] + sequence[iterator - 2]);
 		}
 	}
 	return sequence;
 }
 
-std::vector<int> Fibonacci::Sequence(int numberOfValuesInSequence)
+std::vector<int> Fibonacci::CalculateRecursively(unsigned int numberOfValuesInSequence)
 {
 	for (int i = 0; i < numberOfValuesInSequence; ++i)
 	{
-		sequence.push_back(Recursive(i));
+		sequence.push_back(RecursiveHelper(i));
 	}
 	return sequence;
 }
