@@ -146,10 +146,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Exponent.cpp" />
     <ClCompile Include="..\Fibonacci.cpp" />
     <ClCompile Include="..\Recursion.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Exponent.h" />
     <ClInclude Include="..\Fibonacci.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

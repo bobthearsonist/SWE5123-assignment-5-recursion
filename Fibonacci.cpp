@@ -16,19 +16,19 @@ int Fibonacci::Recursive(int i)
 
 std::vector<int> Fibonacci::Iterative(int index)
 {
-	++count;
-	for (int iterator = index ; iterator < index ; ++index)
+	for (int iterator = 0 ; iterator < index ; ++iterator)
 	{
-		if(index == 0)
+		if(iterator == 0)
 		{
 			sequence.push_back(0);
 		}
-		else if(index == 1)
+		else if(iterator == 1)
 		{
 			sequence.push_back(1);
 		}
 		else
 		{
+			++count;
 			sequence.push_back(sequence[iterator - 1] + sequence[iterator - 2]);
 		}
 	}

@@ -4,11 +4,9 @@
 
 class Fibonacci
 {
-private:
-	int count;
-	std::vector<int> sequence;
 public:
-	Fibonacci() {};
+	int count = 0;
+	std::vector<int> sequence;
 
 	int Recursive(int);
 	std::vector<int> Iterative(int);

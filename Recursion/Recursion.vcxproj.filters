@@ -21,9 +21,15 @@
     <ClCompile Include="..\Recursion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Exponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Exponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
